@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <!--    Page Info    -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thehulley</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            body{
+                background: linear-gradient(287.81deg, #09090A 0%, #121214 100.37%);
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            h1{
+                font: 700 2rem 'Poppins', sans-serif;
+                color: #f1f1f1;
+                transition: color 0.2s;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>:)</h1>
+
+        <script>
+            var text = document.querySelector('h1')
+
+            function changeColor(count){
+                if (count == 1000){
+                    count = 0
+                }
+
+                text.style.color = 'hsla(' + count + ', 76%, 46%, 1)'
+
+                count += 10
+
+                setTimeout(() => {
+                    changeColor(count)
+                }, 150);
+            }
+
+            changeColor(0)
+        </script>
+    </body>
+</html>
